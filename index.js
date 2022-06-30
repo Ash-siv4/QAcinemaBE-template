@@ -8,14 +8,14 @@ const myapp = express(); // initialising it
 myapp.use(cors());
 myapp.use(bodyParser.json()); // converts the request body from JSON (res => res.json())
 
-// get routes
-const movieRouter = require("./routes/routesample");
+// get routes - add all the routes here
+const movieRouter = require("./routes/moviesRoute");
 
 myapp.use("/movies", movieRouter);
 
-// app.use("*", (req, res, next) => next({ status: 404, message: "Invalid url" })); // catches 404's
+// myapp.use("*", (req, res, next) => next({ status: 404, message: "Invalid url" })); // catches 404's
 
-// app.use((err, req, res, next) => {
+// myapp.use((err, req, res, next) => {
 //   res.status(err.status ? err.status : 500).send(err.message);
 // });
 

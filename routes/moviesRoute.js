@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Movie = require("../models/dbsample");
+const Movie = require("../models/movies");
 
 router.get("/readMovies", (req, res, next) => {
   Movie.find()
